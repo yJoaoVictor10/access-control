@@ -76,7 +76,7 @@ if(usuarioJaExiste){
               <label htmlFor="idNome">Nome:</label>
               <input type="text" id="idNome" className="bg-amber-50" {...register("nome", { required: true ,maxLength: 200, minLength:3})} 
               aria-invalid={!!errors.nome} aria-describedby={errors.nome ? "nome-error" : undefined} />
-              {errors.nome && <span role="alert" id="nome-error" className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2">Digite um nome válido!</span>} 
+              {errors.nome && <span role="alert" id="nome-error" className="text-red-600">Digite um nome válido!</span>} 
             </div>
             <div>
               <label htmlFor="idNomeUsuario">Nome de usuário:</label>
@@ -88,7 +88,7 @@ if(usuarioJaExiste){
               <label htmlFor="idEmail">E-mail do usuário:</label>
               <input type="email" id="idEmail" className="bg-amber-50" {...register("email",{required: true, minLength:5,maxLength:255})} 
               aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} />
-              {errors.email && <span role="alert" id="email-error" className="text-red-600 bg-red-300 border-[1px] border-red-600 rounded-md p-2">Email inválido.</span>}
+              {errors.email && <span role="alert" id="email-error" className="text-red-600">Email inválido.</span>}
             </div>
             <div>
               <button type="submit">Cadastrar</button>
@@ -100,4 +100,5 @@ if(usuarioJaExiste){
       </div>
     </main>
     )
+
 }
